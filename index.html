@@ -3,70 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Woodworking Demo</title>
+  <title>Woodworking Demo Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      background-color: #f3f4f6;
+      color: #222;
       margin: 0;
       padding: 0;
       text-align: center;
     }
     header {
-      background-color: #3e4e5e;
+      background-color: #1f2937;
       padding: 20px;
       color: white;
     }
     h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2em;
     }
     .content {
-      padding: 30px;
+      padding: 40px 20px;
     }
-    .upgrade-button {
-      background-color: #28a745;
+    .btn {
+      background-color: #10b981;
       color: white;
       border: none;
-      padding: 15px 25px;
-      font-size: 1.1em;
-      border-radius: 5px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 25px;
+      text-decoration: none;
+      display: inline-block;
     }
-    .upgrade-button:hover {
-      background-color: #218838;
+    .btn:hover {
+      background-color: #059669;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Καλωσήρθατε στο Woodworking Demo!</h1>
+    <h1>Welcome to Your Woodworking Plans Demo</h1>
   </header>
 
   <div class="content">
-    <p>Ανακάλυψε τα κορυφαία σχέδια ξυλουργικής για αρχάριους και επαγγελματίες!</p>
-    <p>Μπορείς να κατεβάσεις την HTML προεπισκόπηση και να τη δεις offline.</p>
+    <p>Discover 50 FREE woodworking plans you can start building today!</p>
+    <p>This is a sample landing page for testing your download button or demo tools.</p>
 
-    <button onclick="downloadHTML()" class="upgrade-button">📥 Κατέβασε το Demo (index.html)</button>
+    <a href="WoodworkingPlansDemo.html" class="btn" download>📥 Download Demo HTML</a>
+
+    <p class="note">Click the button to download a ready-made demo file.</p>
   </div>
-
-  <script>
-    function downloadHTML() {
-      const htmlContent = document.documentElement.outerHTML;
-      const blob = new Blob([htmlContent], { type: "text/html" });
-      const url = URL.createObjectURL(blob);
-
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "WoodworkingDemo.html";
-      a.click();
-
-      URL.revokeObjectURL(url);
-    }
-  </script>
 
 </body>
 </html>
+

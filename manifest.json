@@ -35,3 +35,16 @@ cacheNames.filter(name => name !== CACHE_NAME)
 }) 
 );
 });
+{
+  "name": "My App",
+  "short_name": "App",
+  "start_url": "/index.html",  // Προσθήκη start_url
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "blue_circle.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
